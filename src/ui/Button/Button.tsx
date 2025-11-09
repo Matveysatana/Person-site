@@ -1,14 +1,14 @@
 import type { Buttontype } from "../../types/Button";
 import './Button.css'
 
-const Button = (props:Buttontype) => {
+const Button = (props: Buttontype) => {
 
-    const {className, func, children, size} = props
+    const { className, onClick, children, size } = props
 
     return (
         <button
-        className={`btn ${className} ${size}`}
-        onClick={func}
+            className={`btn ${className} ${size}`}
+            onClick={onClick}
         >
             {children}
         </button>

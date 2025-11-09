@@ -1,4 +1,6 @@
 import Button from "./ui/Button/Button";
+import './styles.css'
+
 const App = () => {
   const hello = () => {
     console.log('Привет')
@@ -6,8 +8,11 @@ const App = () => {
   return (
     <div>
       <h1>Первый компонент</h1>
-      <Button className="" size="big" func={hello}>
-      Кнопка
+      <Button className="" size="big" onClick={hello}>
+        Кнопка
+      </Button>
+      <Button className="acent" size="" onClick={hello}>
+        Акцент
       </Button>
     </div>
   );
