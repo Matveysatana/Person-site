@@ -1,19 +1,11 @@
-import Button from "./ui/Button/Button";
-import './styles.css'
+
+import './styles/styles.css'
+import Layout from "./components/layout/Layout";
 
 const App = () => {
-  const hello = () => {
-    console.log('Привет')
-  }
   return (
     <div>
-      <h1>Первый компонент</h1>
-      <Button className="" size="big" onClick={hello}>
-        Кнопка
-      </Button>
-      <Button className="acent" size="" onClick={hello}>
-        Акцент
-      </Button>
+      <Layout />
     </div>
   );
 };

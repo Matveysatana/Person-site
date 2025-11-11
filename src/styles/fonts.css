@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "PlayfairDisplay";
+    src: url(/public/fonts/PlayfairDisplay/PlayfairDisplay.ttf) format(".ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PlayfairDisplayI";
+    src: url(/public/fonts/PlayfairDisplay/PlayfairDisplay-Italic.ttf) format(".ttf");
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(/public/fonts/Inter/Inter.ttf) format(".ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "InterI";
+    src: url(/public/fonts/Inter/Inter-Italic.ttf) format(".ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url(/public/fonts/Raleway.ttf) format(".ttf");
+    font-display: swap;
+}
