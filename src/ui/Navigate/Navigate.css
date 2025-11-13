@@ -1,0 +1,20 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+
+}
+
+.link {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.link:hover {
+    color: var(--accent-primary);
+    border-bottom: 2px solid var(--accent-secondary);
+    opacity: 1;
+}

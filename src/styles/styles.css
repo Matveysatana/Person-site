@@ -3,23 +3,36 @@
   --white: #ffffff;
   --black: #000000;
 
+  --white-blue: #f0f3fa;
+  --sky-blue: #b1c9ef;
+  --dark-blue-sky: #628ebc;
+
+  /* Оттенки серого */
+  --gray-300: #d4d4d4;
+  --gray-400: #a3a3a3;
+  --gray-500: #737373;
+  --gray-600: #525252;
+  --gray-700: #404040;
+  --gray-800: #262626;
+  --gray-900: #171717;
+
   /* Акцентные цвета - синяя гамма */
   --accent-primary: #2563eb;
   --accent-secondary: #3b82f6;
-  --accent-light: #dbeafe;
+  --accent-dark: #1e40af;
 
   /* Текст */
-  --text-primary: #1f2937;
-  --text-secondary: #6b7280;
-  --text-light: #9ca3af;
+  --text-primary: var(--gray-900);
+  --text-secondary: var(--gray-700);
+  --text-light: var(--gray-500);
 
-  --bg-secondary: #f8fafc;
   --bg-dark: #1a1a1a;
+  --bg-secondary: #f8fafc;
 
 
 
   --border-light: #e5e7eb;
-  --border-medium: #d1d5db;
+  --border-medium: var(--gray-300);
 
   /* Состояния */
   --success: #10b981;
@@ -30,6 +43,7 @@
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-lg-acent: 0 10px 15px -3px rgba(50, 62, 231, 0.1);
 
 
   --gradient-primary: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
@@ -52,7 +66,6 @@ body {
   font-family: "Inter", sans-serif;
   line-height: 1.6;
   color: var(--text-primary);
-  background: var(--white);
 }
 
 h1,
@@ -80,18 +93,37 @@ h3 {
   font-size: 1.75rem;
 }
 
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-primary);
+}
+
 .container {
-  max-width: 1200px;
+  max-width: 100rem;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.4rem;
 }
 
 .section {
   width: 100%;
-  padding: 80px 20px;
+  padding: 2.5rem 1rem;
 }
 
 .section-dark {
   background-color: var(--bg-dark);
   color: var(--white);
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.felx-between {
+  display: flex;
+  justify-content: space-between;
 }
