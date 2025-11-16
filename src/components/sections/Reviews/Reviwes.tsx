@@ -1,9 +1,9 @@
 
 const Reviwes = () => {
     return (
-        <div>
+        <section className="section" id="reviwes">
             Отзывы
-        </div>
+        </section>
     );
 };
 

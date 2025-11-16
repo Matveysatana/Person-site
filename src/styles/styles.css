@@ -111,6 +111,9 @@ a:hover {
 .section {
   width: 100%;
   padding: 2.5rem 1rem;
+  margin-bottom: 5rem;
+  min-height: 100vh;
+  max-height: 100vh;
 }
 
 .section-dark {
@@ -123,7 +126,13 @@ a:hover {
   flex-direction: column;
 }
 
-.felx-between {
+.flex-between {
   display: flex;
   justify-content: space-between;
+}
+
+.text {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
 }

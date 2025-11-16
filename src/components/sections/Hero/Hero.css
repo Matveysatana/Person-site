@@ -42,11 +42,7 @@ s .container__hero {
     margin-bottom: 1.5rem;
 }
 
-.hero__text__desc {
-    font-size: 1.2rem;
-    color: var(--text-light);
-    margin-bottom: 1rem;
-}
+
 
 .name {
     white-space: nowrap;
@@ -60,7 +56,6 @@ s .container__hero {
     max-width: 25rem;
     width: 100%;
     height: auto;
-
 }
 
 .buttons {

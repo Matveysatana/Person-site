@@ -1,9 +1,9 @@
 
 const CTA = () => {
     return (
-        <div>
+        <section className="section" id="CTA">
             Призыв к действию
-        </div>
+        </section>
     );
 };
 

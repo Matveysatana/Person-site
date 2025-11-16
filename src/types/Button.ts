@@ -1,6 +1,6 @@
 interface Buttontype {
     className?: string,
-    onClick?: () => void,
+    onClick?: () => void;
     children: React.ReactNode,
     size?: string
 }

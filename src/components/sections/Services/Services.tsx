@@ -1,9 +1,9 @@
 
 const Services = () => {
     return (
-        <div>
+        <section className="section" id="service">
             Услуги
-        </div>
+        </section>
     );
 };
 

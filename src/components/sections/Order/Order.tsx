@@ -1,9 +1,9 @@
 
 const Order = () => {
     return (
-        <div>
+        <section className="section" id="order">
             Форма с отправкой данных
-        </div>
+        </section>
     );
 };
 

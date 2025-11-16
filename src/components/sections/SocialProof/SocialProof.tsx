@@ -1,9 +1,9 @@
 
 const SocialProof = () => {
     return (
-        <div>
+        <section className="section" id="social">
             Секция соц сетей
-        </div>
+        </section>
     );
 };
 
