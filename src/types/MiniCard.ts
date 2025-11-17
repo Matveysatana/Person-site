@@ -9,6 +9,8 @@ export interface MiniCardProps {
   image: string;
   title: string;
   description?: string;
+  section: string
+  onClick?: () => void
 }
 
 export const skills = [
@@ -16,19 +18,24 @@ export const skills = [
     id: 1,
     image: designIcon,
     title: "Дизайн",
-    description: "UI/UX дизайн"
+    description: "UI/UX дизайн",
+    section: 'service'
   },
   {
     id: 2,
     image: codeIcon,
     title: "Разработка",
-    description: "Веб-приложения"
+    description: "Веб-приложения",
+    section: 'service'
+
   },
   {
     id: 3,
     image: videoIcon,
     title: "Видео",
-    description: "Монтаж и анимация"
+    description: "Монтаж и анимация",
+    section: 'service'
+
   }
 ];
 

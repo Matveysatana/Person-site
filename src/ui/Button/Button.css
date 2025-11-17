@@ -26,17 +26,27 @@
     transition: all 0.1s ease;
 }
 
-
-
 .acent {
     background-color: var(--accent-primary);
     color: var(--white);
 }
 
+.acent-dark {
+    background-color: var(--gray-900);
+    border: 1px solid var(--accent-primary);
+    color: var(--gray-light);
+}
+
+.acent-dark:hover {
+    background-color: var(--accent-primary);
+    border: none;
+    color: var(--wheat);
+}
+
 .acent:hover {
     color: var(--white);
     box-shadow: var(--shadow-lg);
-    border: 1px solid var(--accent-dark);
+    border: 1px solid var(--accent-secondary);
 }
 
 .big {

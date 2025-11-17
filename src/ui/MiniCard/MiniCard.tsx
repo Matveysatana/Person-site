@@ -1,19 +1,11 @@
 import type { MiniCardProps } from '../../types/MiniCard';
+import { scrollToSection } from '../../utils/scrollUtils';
 import './MiniCard.css'
 
-const MiniCard = ({ image, title, description }: MiniCardProps) => {
-  const handleClick = () => {
-
-    const servicesSection = document.getElementById('service');
-    if (servicesSection) {
-      servicesSection.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-  };
+const MiniCard = ({ image, title, description, section }: MiniCardProps) => {
 
   return (
-    <div className="mini__card" onClick={handleClick}>
+    <div className="mini__card" onClick={() => scrollToSection(section)}>
       <div className="mini__card__image">
         <img src={image} alt={title} />
       </div>
