@@ -1,9 +1,8 @@
 import About from "../sections/About/About";
-import Cases from "../sections/Cases/Cases";
 import CTA from "../sections/CTA/CTA";
 import Hero from "../sections/Hero/Hero";
 import Order from "../sections/Order/Order";
-import Reviwes from "../sections/Reviews/Reviwes";
+import Portfolio from "../sections/Portfolio/Portfolio";
 import Services from "../sections/Services/Services";
 import SocialProof from "../sections/SocialProof/SocialProof";
 import './Layout.css'
@@ -14,8 +13,7 @@ const Layout = () => {
             <Hero />
             <About />
             <Services />
-            <Cases />
-            <Reviwes />
+            <Portfolio />
             <CTA />
             <SocialProof />
             <Order />
