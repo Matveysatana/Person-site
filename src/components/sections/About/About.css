@@ -2,11 +2,6 @@
     max-width: 55rem;
 }
 
-.about__text__title {
-    color: var(--accent-primary);
-    font-weight: bold;
-}
-
 .about__quote {
     font-style: italic;
     color: var(--text-secondary);

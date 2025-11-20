@@ -1,0 +1,134 @@
+.social-card {
+    display: block;
+    background: white;
+    border-radius: 16px;
+    padding: 2px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+    height: 280px;
+    min-width: 220px;
+}
+
+.social-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 14px;
+    padding: 2px;
+    background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color) 30%, transparent));
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: subtract;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.social-card:hover::before {
+    opacity: 1;
+    background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color) 70%, transparent));
+}
+
+.social-card__inner {
+    position: relative;
+    height: 100%;
+    background: white;
+    border-radius: 14px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.social-card__content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.social-card__icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    filter: grayscale(0.3);
+    transition: filter 0.3s ease;
+}
+
+.social-card:hover .social-card__icon {
+    filter: grayscale(0);
+}
+
+.social-card__name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 8px 0;
+    line-height: 1.2;
+}
+
+.social-card__subscribers {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.social-card__description {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #555;
+    margin: 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.social-card__hover {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.95) 60%, transparent);
+    padding: 40px 24px 24px;
+    border-radius: 0 0 14px 14px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-card:hover .social-card__hover {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.social-card__button {
+    width: 100%;
+    padding: 12px 24px;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.social-card__button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
