@@ -2,7 +2,8 @@ interface Buttontype {
     className?: string,
     onClick?: () => void;
     children: React.ReactNode,
-    size?: string
+    size?: string,
+    type?: string
 }
 
-export  type {Buttontype};
+export type { Buttontype };
