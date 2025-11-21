@@ -1,4 +1,4 @@
-import aboutFoto from '../../../assets/images/about.png'
+import aboutFoto from '../../../assets/images/red.png'
 import { benefit } from '../../../types/BenefitItem';
 import BenefitItem from '../../../ui/BenefitItem/BenefitItem';
 // import { skills } from '../../../types/MiniCard';

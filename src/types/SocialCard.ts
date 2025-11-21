@@ -44,17 +44,17 @@ export const socialData: SocialCardProps[] = [
     subscribers: "27 подписчиков",
     description: "Челленджи, факты, исследования и бизнес-контент",
     icon: "▶️",
-    link: "#",
+    link: "https://youtube.com/@mottyrix",
     buttonText: "Subscribe",
     color: "#FF0000"
   },
   {
     id: 2,
     name: "Telegram",
-    subscribers: "7 подписчиков", 
+    subscribers: "7 подписчиков",
     description: "Факты о моей жизни, мысли и планы. Бесплатные полезные материалы!",
     icon: "✈️",
-    link: "#",
+    link: "https://t.me/Mottyrix",
     buttonText: "Join",
     color: "#0088CC"
   },
@@ -64,7 +64,7 @@ export const socialData: SocialCardProps[] = [
     subscribers: "10 подписчиков",
     description: "Эдиты, мотивационные и юмористические видео",
     icon: "🎵",
-    link: "#",
+    link: "https://www.tiktok.com/@mottyrix",
     buttonText: "Follow",
     color: "#000000"
   },
@@ -74,7 +74,7 @@ export const socialData: SocialCardProps[] = [
     subscribers: "20 постов",
     description: "Посты и рилсы о жизни и бизнесе",
     icon: "📸",
-    link: "#",
+    link: "https://www.instagram.com/motty.world",
     buttonText: "Follow",
     color: "#E4405F"
   }

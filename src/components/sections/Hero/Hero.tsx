@@ -1,5 +1,5 @@
 import Navigate from "../../../ui/Navigate/Navigate";
-import hero from '../../../assets/images/1.png'
+import hero from '../../../assets/images/black.png'
 import logo from '../../../../public/logo.svg'
 import './Hero.css'
 import Button from "../../../ui/Button/Button";
