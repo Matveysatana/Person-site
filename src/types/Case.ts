@@ -1,9 +1,9 @@
-
+// import project from '../assets/images/project.png'
 
 export interface CaseProps {
   id: number;
   link: string;
-  image: string;
+  image?: string;
   title: string;
   result: string;
   description: string;
@@ -16,8 +16,8 @@ export interface CaseProps {
 export const projects: CaseProps[] = [
   {
     id: 1,
-    link: "https://example.com/project1",
-    image: "/images/project1.jpg",
+    link: "https://matveysatana.github.io/My-portfolio-blog/",
+    image: "",
     title: "Корпоративный сайт для TechCompany",
     result: "Увеличение конверсии на 45%",
     description: "Разработали современный корпоративный сайт с системой управления контентом. Реализовали адаптивный дизайн и оптимизировали скорость загрузки.",
@@ -28,7 +28,7 @@ export const projects: CaseProps[] = [
   },
   {
     id: 2,
-    link: "https://example.com/project2",
+    link: "https://matveysatana.github.io/cookies/",
     image: "/images/project2.jpg",
     title: "Интернет-магазин модной одежды",
     result: "Рост онлайн-продаж на 120%",
@@ -40,7 +40,19 @@ export const projects: CaseProps[] = [
   },
   {
     id: 3,
-    link: "https://example.com/project3",
+    link: "https://www.instagram.com/p/DQDoxelihFo/?igsh=NWdwZDM3cWVxbzdu",
+    image: "/images/project3.jpg",
+    title: "Лендинг для запуска продукта",
+    result: "Собрали 500+ заявок за первую неделю",
+    description: "Разработали продающий лендинг для запуска нового продукта. Реализовали A/B тестирование и формы захвата лидов.",
+    author: {
+      image: "/images/client3.jpg",
+      name: "Елена Сидорова"
+    }
+  },
+  {
+    id: 4,
+    link: "https://www.instagram.com/p/DQDoxelihFo/?igsh=NWdwZDM3cWVxbzdu",
     image: "/images/project3.jpg",
     title: "Лендинг для запуска продукта",
     result: "Собрали 500+ заявок за первую неделю",

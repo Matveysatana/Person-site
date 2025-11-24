@@ -1,8 +1,8 @@
-import aboutFoto from '../../../assets/images/red.png'
+import aboutFoto from '../../../assets/images/about.jpg'
 import { benefit } from '../../../types/BenefitItem';
 import BenefitItem from '../../../ui/BenefitItem/BenefitItem';
-// import { skills } from '../../../types/MiniCard';
-// import MiniCard from '../../../ui/MiniCard/MiniCard';
+import Link from '../../../ui/Link/Link';
+
 import './About.css'
 
 
@@ -11,7 +11,10 @@ const About = () => {
         <section className="section" id="about">
             <div className="container flex-between">
                 <div className="about__image_block">
-                    <img src={aboutFoto} className="about__image" alt="" />
+                    <img src={aboutFoto} className="about__image" alt="Фото Матвея" />
+                    <figcaption className="about__image_caption">
+                        Фотка с первенства Крыма, поподробнее можно посмотреть <Link id='' className='link__text'>здесь</Link>
+                    </figcaption>
                 </div>
                 <div className="about__text">
                     <h2 className="about__text__title">Почему выбирают меня?</h2>
@@ -27,17 +30,6 @@ const About = () => {
                         что-то крутое и полезное.</p>
 
                     <div className="about__benefit">
-                        {/* {skills.map((skill) => (
-                            <MiniCard
-                                key={skill.id}
-                                title={skill.title}
-                                description={skill.description}
-                                image={skill.image}
-                                section={skill.section}
-                            />
-                        ))
-                        } */}
-
                         {benefit.map((benefit) => (
                             <BenefitItem
                                 key={benefit.id}

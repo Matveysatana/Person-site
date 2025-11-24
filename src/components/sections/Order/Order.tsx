@@ -1,4 +1,4 @@
-import myPhoto from '../../../assets/images/shory.png'
+import myPhoto from '../../../assets/images/about.jpg'
 import Button from '../../../ui/Button/Button';
 import './Order.css'
 import { useForm } from 'react-hook-form';
