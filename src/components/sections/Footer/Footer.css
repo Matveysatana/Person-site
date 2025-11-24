@@ -13,3 +13,9 @@
     justify-content: center;
     align-items: center;
 }
+
+.footer__social img {
+    min-width: 3rem;
+    height: auto;
+    cursor: pointer;
+}

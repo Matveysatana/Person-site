@@ -1,12 +1,6 @@
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.2rem;
-
-}
-
 .link {
+    color: var(--text-primary);
+    text-decoration: none;
     font-size: 1.2rem;
     opacity: 0.9;
     border-bottom: 2px solid transparent;
@@ -18,3 +12,4 @@ nav {
     border-bottom: 2px solid var(--accent-secondary);
     opacity: 1;
 }
+

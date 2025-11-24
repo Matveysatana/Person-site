@@ -4,9 +4,9 @@ import teleframm from '../../../assets/socialLogos/Telegtam.svg'
 import tiktok from '../../../assets/socialLogos/TikTok.svg'
 import instagramm from '../../../assets/socialLogos/Insta.svg'
 
-import Navigate from '../../../ui/Navigate/Navigate';
 
 import './Footer.css'
+import Link from '../../../ui/Link/Link'
 
 
 const Footer = () => {
@@ -17,14 +17,26 @@ const Footer = () => {
                 <img src={logo} alt="Логотип" className="logo" />
 
                 <div className="footer__nav">
-                    навигация
-                    <Navigate />
+                    <nav>
+                        <Link id={'#about'} className={'footer__link link'}>Обо мне</Link>
+                        <Link id={'#service'} className={'footer__link link'}>Услуги</Link>
+                        <Link id={'#portfolio'} className={'footer__link link'}>Кейсы</Link>
+                        <Link id={'#social'} className={'footer__link link'}>Соц сети</Link>
+                    </nav>
                 </div>
                 <div className="footer__social">
-                    <img src={youtube} alt="" />
-                    <img src={teleframm} alt="" />
-                    <img src={tiktok} alt="" />
-                    <img src={instagramm} alt="" />
+                    <Link id={""} className={"social"}>
+                        <img src={youtube} alt="" />
+                    </Link>
+                    <Link id={""} className={"social"}>
+                        <img src={teleframm} alt="" />
+                    </Link>
+                    <Link id={""} className={"social"}>
+                        <img src={tiktok} alt="" />
+                    </Link>
+                    <Link id={""} className={"social"}>
+                        <img src={instagramm} alt="" />
+                    </Link>
 
                 </div>
                 <div className="footer__copr">

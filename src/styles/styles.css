@@ -29,8 +29,6 @@
   --bg-dark: #1a1a1a;
   --bg-secondary: #f8fafc;
 
-
-
   --border-light: #e5e7eb;
   --border-medium: var(--gray-300);
 
@@ -39,19 +37,17 @@
   --error: #ef4444;
   --warning: #f59e0b;
 
-  /* Тени */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   --shadow-lg-acent: 0 20px 20px -3px rgba(35, 50, 255, 0.1);
   --shadow-sm-acent: 0 10px 15px -3px rgba(35, 50, 255, 0.1);
 
-
-
   --gradient-primary: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
   --gradient-hero: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
 
 }
+
 
 
 * {
@@ -97,14 +93,20 @@ h3 {
   font-size: 1.75rem;
 }
 
-a {
-  color: var(--text-primary);
-  text-decoration: none;
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+
 }
 
-a:hover {
-  color: var(--accent-primary);
+nav .footer__link {
+  color: var(--text-secondary);
+  font-size: 1.3rem;
 }
+
 
 .container {
   max-width: 100rem;
@@ -142,3 +144,7 @@ a:hover {
   color: var(--text-light);
   margin-bottom: 1.5rem;
 }
+
+
+
+/* Адаптив глобальных стилей */

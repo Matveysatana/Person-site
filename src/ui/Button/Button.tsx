@@ -1,5 +1,12 @@
-import type { Buttontype } from "../../types/Button";
 import './Button.css'
+
+interface Buttontype {
+    className?: string,
+    onClick?: () => void;
+    children: React.ReactNode,
+    size?: string,
+    type?: string
+}
 
 const Button = (props: Buttontype) => {
 
