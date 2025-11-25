@@ -1,31 +1,3 @@
-
-
-// export interface SocialCardProps {
-//     id: number;
-//     name: string;
-//     subscribers: string;
-//     description: string;
-//     contentTypes: string[];
-//     icon: string;
-//     link: string;
-//     color: string;
-// }
-
-// export const socialData: SocialCardProps[] = [
-//     {
-//         id: 1,
-//         name: "YouTube",
-//         subscribers: "27 подписчиков",
-//         description: "Челленджи, факты, исследования и бизнес-контент. Планирую расширять контент!",
-//         contentTypes: ["Челленджи", "Факты", "Исследования", "Бизнес"],
-//         icon: "▶️",
-//         link: "#",
-//         color: "linear-gradient(135deg, #FF0000, #CC0000)"
-//     },
-
-// ];
-
-
 export interface SocialCardProps {
   id: number;
   name: string;
@@ -45,7 +17,7 @@ export const socialData: SocialCardProps[] = [
     description: "Челленджи, факты, исследования и бизнес-контент",
     icon: "▶️",
     link: "https://youtube.com/@mottyrix",
-    buttonText: "Subscribe",
+    buttonText: "Подписаться",
     color: "#FF0000"
   },
   {
@@ -55,7 +27,7 @@ export const socialData: SocialCardProps[] = [
     description: "Факты о моей жизни, мысли и планы. Бесплатные полезные материалы!",
     icon: "✈️",
     link: "https://t.me/Mottyrix",
-    buttonText: "Join",
+    buttonText: "Присоединиться",
     color: "#0088CC"
   },
   {
@@ -65,7 +37,7 @@ export const socialData: SocialCardProps[] = [
     description: "Эдиты, мотивационные и юмористические видео",
     icon: "🎵",
     link: "https://www.tiktok.com/@mottyrix",
-    buttonText: "Follow",
+    buttonText: "Смотреть",
     color: "#000000"
   },
   {
@@ -75,7 +47,7 @@ export const socialData: SocialCardProps[] = [
     description: "Посты и рилсы о жизни и бизнесе",
     icon: "📸",
     link: "https://www.instagram.com/motty.world",
-    buttonText: "Follow",
+    buttonText: "Читать",
     color: "#E4405F"
   }
 ];

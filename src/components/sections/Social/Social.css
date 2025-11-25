@@ -4,12 +4,21 @@
   margin-bottom: 4rem;
 }
 
-
-
-
 .social__cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
   justify-content: center;
+}
+
+.extra_text {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.text_social {
+  color: var(--text-light);
+  font-size: 1rem;
+  font-style: italic;
+
 }

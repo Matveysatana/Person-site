@@ -13,7 +13,7 @@ const Hero = () => {
         <section className="section" id="home">
             <div className="container flex-column">
                 <div className={`container__header flex-between`}>
-                    <a className="header__logo" href="/">
+                    <a className="header__logo" href="https://t.me/Mottyrix">
                         <img src={logo} alt="Логотип" className="logo" />
                         <span className="logo__text">Motty</span>
                     </a>

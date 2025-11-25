@@ -1,7 +1,7 @@
 .social-card {
     display: block;
     background: white;
-    border-radius: 16px;
+    border-radius: 1rem;
     padding: 2px;
     text-decoration: none;
     color: inherit;
@@ -120,8 +120,8 @@
     background: var(--accent-color);
     color: white;
     border: none;
-    border-radius: 8px;
-    font-weight: 600;
+    font-weight: 500;
+    border-radius: 0.5rem;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;

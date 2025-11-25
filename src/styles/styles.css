@@ -4,6 +4,7 @@
   --black: #000000;
 
   --white-blue: #f0f3fa;
+  --white-blue-lighter: #f5f7fc;
   --sky-blue: #b1c9ef;
   --dark-blue-sky: #628ebc;
 
@@ -61,6 +62,7 @@ html {
 }
 
 body {
+  background-color: var(--bg-secondary);
   font-family: "Inter", sans-serif;
   line-height: 1.6;
   color: var(--text-primary);
@@ -119,7 +121,6 @@ nav .footer__link {
   padding: 2.5rem 1rem;
   margin-bottom: 5rem;
   min-height: 100vh;
-  max-height: 100vh;
 }
 
 /* section-dark */

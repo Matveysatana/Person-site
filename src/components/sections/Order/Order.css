@@ -6,7 +6,6 @@
     min-height: 80vh;
 }
 
-/* Левая часть - Фото и текст */
 .order__info {
     flex: 1;
     display: flex;
@@ -14,12 +13,20 @@
     gap: 2rem;
 }
 
+.order__photo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .order__photo {
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
     width: 100%;
     max-width: 400px;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: var(--shadow-lg);
+    height: 400px;
+    box-shadow: var(--shadow-lg-acent);
 }
 
 .order__text h3 {
@@ -69,7 +76,6 @@
     margin: 0;
 }
 
-/* Правая часть - Форма */
 .order__form-container {
     flex: 1;
 }
@@ -98,7 +104,6 @@
     font-size: 0.95rem;
 }
 
-/* Стили формы */
 .form__group {
     margin-bottom: 1.5rem;
 }
@@ -159,7 +164,6 @@
     margin-top: 0.5rem;
 }
 
-/* Адаптивность */
 @media (max-width: 968px) {
     .order__wrapper {
         flex-direction: column;
@@ -180,6 +184,7 @@
 
     .order__photo {
         max-width: 300px;
+        height: 300px; 
     }
 
     .order__text h3 {
@@ -194,5 +199,17 @@
 
     .advantage {
         padding: 1rem;
+    }
+
+    .order__photo {
+        max-width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 360px) {
+    .order__photo {
+        max-width: 180px;
+        height: 180px;
     }
 }

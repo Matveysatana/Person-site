@@ -5,11 +5,10 @@
     max-width: 35rem;
     min-height: 40rem;
     gap: 1rem;
-    padding: 1rem;
+    padding: 2rem;
 
     border: 1px solid var(--accent-secondary);
     border-radius: 1rem;
-    background-color: var(--gray-900);
     box-shadow: var(--shadow-lg-acent);
 }
 
@@ -28,9 +27,11 @@
 }
 
 .card__icon {
-    border: 1px solid var(--accent-primary);
     padding: 0.5rem;
     border-radius: 1rem;
+    filter: brightness(0) saturate(100%);
+    border: 1px solid var(--accent-primary);
+
 }
 
 .card__content {
@@ -82,7 +83,7 @@
     padding-bottom: 1rem;
 }
 
-.card__cta .acent-dark {
+.card__cta .acent {
     width: 100%;
     justify-content: center;
 }

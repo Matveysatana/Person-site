@@ -1,0 +1,75 @@
+.portfolio__text {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.portfolio__slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.portfolio__slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.portfolio__slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Индикаторы */
+.portfolio__indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+}
+
+.portfolio__indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.portfolio__indicator--active {
+    background: #007bff;
+    transform: scale(1.2);
+}
+
+.portfolio__indicator:hover {
+    background: #b0b0b0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .portfolio__indicators {
+        margin-top: 1rem;
+    }
+    
+    .portfolio__indicator {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio__indicators {
+        gap: 0.3rem;
+    }
+    
+    .portfolio__indicator {
+        width: 8px;
+        height: 8px;
+    }
+}

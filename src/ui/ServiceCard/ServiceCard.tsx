@@ -38,7 +38,7 @@ const ServiceCard = ({ id, image, title, description, features }: ServiceCardPro
             </div>
 
             <div className="card__cta">
-                <Button className="acent-dark" onClick={() => scrollToSection("order")}>Обсудить проект</Button>
+                <Button className="acent" onClick={() => scrollToSection("order")}>Обсудить проект</Button>
             </div>
         </div>
     );
