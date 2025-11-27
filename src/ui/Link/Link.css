@@ -27,3 +27,53 @@
     border-bottom: 2px solid var(--accent-secondary);
 
 }
+
+.header__logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.footer_copy {
+    color: var(--accent-primary);
+    opacity: 0.7;
+    transition: all 0.5s ease;
+}
+
+.footer_copy:hover {
+    opacity: 1;
+}
+
+.social {
+    display: inline-block;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.social img {
+    width: 24px;
+    height: 24px;
+    transition: filter 0.3s ease;
+}
+
+.social:hover {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+/* Цвета остаются теми же */
+.social.youtube:hover img {
+    filter: invert(16%) sepia(99%) saturate(7454%) hue-rotate(0deg) brightness(100%) contrast(118%);
+}
+
+.social.telegram:hover img {
+    filter: invert(48%) sepia(98%) saturate(2085%) hue-rotate(165deg) brightness(94%) contrast(101%);
+}
+
+.social.tiktok:hover img {
+    filter: invert(9%) sepia(99%) saturate(7453%) hue-rotate(317deg) brightness(101%) contrast(101%);
+}
+
+.social.instagram:hover img {
+    filter: invert(26%) sepia(89%) saturate(2085%) hue-rotate(295deg) brightness(98%) contrast(92%);
+}

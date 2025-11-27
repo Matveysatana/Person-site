@@ -47,6 +47,10 @@
   --gradient-primary: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
   --gradient-hero: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
 
+  --container-padding: clamp(1rem, 3vw, 1.4rem);
+  --section-padding: clamp(1.5rem, 4vw, 2.5rem);
+  --mobile-padding: 0.5rem;
+
 }
 
 
@@ -81,27 +85,30 @@ h6 {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   color: var(--accent-primary);
   font-weight: bold;
+  white-space: nowrap;
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: clamp(1.4rem, 3vw, 1.75rem);
 }
 
+a {
+  text-decoration: none;
+}
 
 nav {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.2rem;
-
 }
 
 nav .footer__link {
@@ -113,21 +120,14 @@ nav .footer__link {
 .container {
   max-width: 100rem;
   margin: 0 auto;
-  padding: 0 1.4rem;
+  padding: 0 var(--container-padding);
 }
 
 .section {
   width: 100%;
-  padding: 2.5rem 1rem;
-  margin-bottom: 5rem;
+  padding: var(--section-padding) var(--mobile-padding);
+  margin-bottom: clamp(2rem, 6vw, 5rem);
   min-height: 100vh;
-}
-
-/* section-dark */
-.dark {
-  background-color: var(--bg-dark);
-  color: var(--white);
-  min-height: 102vh;
 }
 
 .flex-column {
@@ -141,11 +141,50 @@ nav .footer__link {
 }
 
 .text {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: var(--text-light);
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(1rem, 3vw, 1.5rem);
 }
 
 
 
 /* Адаптив глобальных стилей */
+
+@media (max-width: 768px) {
+  .section {
+    min-height: auto;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  nav .footer__link {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 0.75rem;
+  }
+
+  .section {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+  nav {
+    gap: 0.8rem;
+  }
+
+  nav .footer__link {
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .text {
+    font-size: 0.9rem;
+  }
+}

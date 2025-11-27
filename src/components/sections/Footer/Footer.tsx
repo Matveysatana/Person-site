@@ -14,7 +14,7 @@ const Footer = () => {
         <div className='footer'>
             <div className="container footer__contetn">
 
-                <img src={logo} alt="Логотип" className="logo" />
+                <Link id={"https://t.me/Mottyrix"} target="_blank" ><img src={logo} alt="Логотип" className="footer_logo" /></Link>
 
                 <div className="footer__nav">
                     <nav>
@@ -25,23 +25,23 @@ const Footer = () => {
                     </nav>
                 </div>
                 <div className="footer__social">
-                    <Link id={""} className={"social"}>
+                    <Link id={"https://youtube.com/@mottyrix"} className={"social youtube"} target="_blank">
                         <img src={youtube} alt="" />
                     </Link>
-                    <Link id={""} className={"social"}>
+                    <Link id={"https://t.me/Mottyrix"} className={"social telegram"} target="_blank">
                         <img src={teleframm} alt="" />
                     </Link>
-                    <Link id={""} className={"social"}>
+                    <Link id={"https://www.tiktok.com/@mottyrix"} className={"social tiktok"} target="_blank">
                         <img src={tiktok} alt="" />
                     </Link>
-                    <Link id={""} className={"social"}>
+                    <Link id={"https://www.instagram.com/motty.world"} className={"social instagram"} target="_blank">
                         <img src={instagramm} alt="" />
                     </Link>
 
                 </div>
                 <div className="footer__copr">
-                    Все права защиещены
-                    <span className='footer__title'> Сатановский Матвей 2025</span>
+                    <p className="text">Все права защиещены</p>
+                    <Link id={'https://t.me/Mottyrix'} className='footer_copy' ><span className='footer__title'> @Сатановский&nbsp;Матвей&nbsp;2025</span></Link>
                 </div>
             </div>
         </div>

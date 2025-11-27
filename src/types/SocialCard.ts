@@ -23,7 +23,7 @@ export const socialData: SocialCardProps[] = [
   {
     id: 2,
     name: "Telegram",
-    subscribers: "7 подписчиков",
+    subscribers: "6 подписчиков",
     description: "Факты о моей жизни, мысли и планы. Бесплатные полезные материалы!",
     icon: "✈️",
     link: "https://t.me/Mottyrix",

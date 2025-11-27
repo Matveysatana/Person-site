@@ -11,7 +11,7 @@ const About = () => {
         <section className="section" id="about">
             <div className="container flex-between">
                 <div className="about__image_block">
-                    <img src={aboutFoto} className="about__image" alt="Фото Матвея" />
+                    <img src={aboutFoto} className="about__image" alt="Фото Матвея" loading='lazy' />
                     <figcaption className="about__image_caption">
                         Фотка с первенства Крыма, поподробнее можно посмотреть <Link id='' className='link__text'>здесь</Link>
                     </figcaption>

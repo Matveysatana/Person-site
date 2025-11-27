@@ -18,18 +18,14 @@
     padding: 0.5rem;
     border-radius: 0.5rem;
     border-left: 4px solid var(--accent-secondary);
-
     margin-bottom: 3rem;
     box-shadow: var(--shadow-sm);
 }
-
-
 
 .about__benefit {
     display: flex;
     gap: 1rem;
 }
-
 
 .about__image_block {
     width: 40%;
@@ -45,7 +41,6 @@
     border: 2px solid var(--accent-primary);
     border-radius: 1.5rem;
     box-shadow: var(--shadow-lg-acent);
-
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -58,4 +53,116 @@
     color: var(--text-light);
     font-size: 0.9rem;
     padding: 0 0.5rem;
+}
+
+/* Планшеты (768px - 1024px) */
+@media (max-width: 1024px) {
+    #about {
+        padding-top: 8rem;
+    }
+
+    .about__text {
+        padding-left: 3rem;
+    }
+
+    .about__image_block {
+        width: 45%;
+        height: 30rem;
+        min-width: 18rem;
+    }
+
+    .about__benefit {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .about__quote {
+        margin-bottom: 2rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Мобильные устройства (480px - 767px) */
+@media (max-width: 767px) {
+    #about {
+        padding-top: 6rem;
+    }
+
+    .container.flex-between {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about__image_block {
+        width: 100%;
+        max-width: 25rem;
+        min-width: auto;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .about__text {
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .about__quote {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        padding: 0.75rem;
+    }
+
+    .about__benefit {
+        gap: 1rem;
+    }
+
+    .about__image_caption {
+        font-size: 0.85rem;
+    }
+}
+
+/* Маленькие мобильные устройства (до 479px) */
+@media (max-width: 479px) {
+    #about {
+        padding-top: 4rem;
+    }
+
+    .about__image_block {
+        max-width: 100%;
+    }
+
+    .about__image {
+        border-radius: 1rem;
+    }
+
+    .about__quote {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+    }
+
+    .about__text__title {
+        font-size: 1.5rem;
+    }
+
+    .text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .about__image_caption {
+        font-size: 0.8rem;
+    }
+}
+
+/* Большие планшеты в альбомной ориентации */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .about__image_block {
+        width: 42%;
+        height: 32rem;
+    }
+
+    .about__text {
+        padding-left: 4rem;
+    }
 }
