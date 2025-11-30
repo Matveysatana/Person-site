@@ -1,7 +1,8 @@
-import myPhoto from "../../../assets/images/order.png"
+import myPhoto from "../../../assets/images/order.png";
 import Button from '../../../ui/Button/Button';
-import './Order.css'
+import './Order.css';
 import { useForm } from 'react-hook-form';
+import { useState } from 'react';
 
 interface OrderFormData {
     name: string;
@@ -11,10 +12,40 @@ interface OrderFormData {
 }
 
 const Order = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm<OrderFormData>();
+    const { register, handleSubmit, formState: { errors }, reset } = useForm<OrderFormData>();
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitMessage, setSubmitMessage] = useState('');
 
-    const onSubmit = (data: OrderFormData) => {
-        console.log('Форма отправлена:', data);
+    // URL твоего сервера на Vercel
+    const EMAIL_API_URL = 'https://email-server-qgphttrjq-matveys-projects-86ea41cd.vercel.app/api/send-email';
+
+    const onSubmit = async (data: OrderFormData) => {
+        setIsSubmitting(true);
+        setSubmitMessage('');
+
+        try {
+            const response = await fetch(EMAIL_API_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                setSubmitMessage('✅ Сообщение отправлено! Я свяжусь с вами в течение 24 часов.');
+                reset(); // Очищаем форму
+            } else {
+                setSubmitMessage(`❌ ${result.message}`);
+            }
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        } catch (error) {
+            setSubmitMessage('❌ Ошибка сети. Пожалуйста, попробуйте еще раз.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -34,6 +65,7 @@ const Order = () => {
                         </div>
                     </div>
 
+                    {/* Правая часть - Форма */}
                     <div className="order__form-container">
                         <form onSubmit={handleSubmit(onSubmit)} className="order__form">
                             <h4 className="form__title">Обсудить проект</h4>
@@ -105,9 +137,16 @@ const Order = () => {
                             <Button
                                 type="submit"
                                 className="form__button"
+                                disabled={isSubmitting}
                             >
-                                Отправить заявку
+                                {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
                             </Button>
+
+                            {submitMessage && (
+                                <div className={`submit-message ${submitMessage.includes('✅') ? 'submit-message--success' : 'submit-message--error'}`}>
+                                    {submitMessage}
+                                </div>
+                            )}
                         </form>
                     </div>
                 </div>
