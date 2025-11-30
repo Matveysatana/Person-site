@@ -3,7 +3,7 @@ import project2 from '../assets/images/project2.png'
 import project3 from '../assets/images/project3.png'
 import project4 from '../assets/images/project4.png'
 
-import author from '../assets/images/red.jpg'
+import author from '../assets/images/order.png'
 
 export interface CaseProps {
   id: number;
@@ -23,9 +23,9 @@ export const projects: CaseProps[] = [
     id: 1,
     link: "https://matveysatana.github.io/My-portfolio-blog/",
     image: project,
-    title: "Корпоративный сайт для TechCompany",
-    result: "Увеличение конверсии на 45%",
-    description: "Разработали современный корпоративный сайт с системой управления контентом. Реализовали адаптивный дизайн и оптимизировали скорость загрузки.",
+    title: "Личный блог-портфолио",
+    result: "Успешная защита проекта с максимальной оценкой",
+    description: "Разработал полнофункциональный сайт-портфолио на React с системой блога. Реализовал адаптивный дизайн и интерактивные компоненты, освоив современные подходы фронтенд-разработки.",
     author: {
       image: author,
       name: "Сатановский Матвей"
@@ -35,9 +35,9 @@ export const projects: CaseProps[] = [
     id: 2,
     link: "https://matveysatana.github.io/cookies/",
     image: project2,
-    title: "Интернет-магазин модной одежды",
-    result: "Рост онлайн-продаж на 120%",
-    description: "Создали полнофункциональный интернет-магазин с интеграцией платежных систем и CRM. Настроили аналитику и автоматизацию процессов.",
+    title: "Интернет-магазин кондитерских изделий",
+    result: "Создание современного e-commerce решения",
+    description: "Разработал лендинг для онлайн-магазина на Angular с продуманным UI/UX. Реализовал интуитивную навигацию и привлекательный дизайн, подчеркивающий premium-качество продукции.",
     author: {
       image: author,
       name: "Сатановский Матвей"
@@ -47,9 +47,9 @@ export const projects: CaseProps[] = [
     id: 3,
     link: "https://www.instagram.com/p/DQDoxelihFo/?igsh=NWdwZDM3cWVxbzdu",
     image: project3,
-    title: "Лендинг для запуска продукта",
-    result: "Собрали 500+ заявок за первую неделю",
-    description: "Разработали продающий лендинг для запуска нового продукта. Реализовали A/B тестирование и формы захвата лидов.",
+    title: "Продающий контент для социальных сетей",
+    result: "500+ просмотров и высокая вовлеченность аудитории",
+    description: "Создал серию продающих постов с A/B тестированием и формами захвата лидов. Разработал визуальную концепцию, которая увеличила узнаваемость бренда.",
     author: {
       image: author,
       name: "Сатановский Матвей"
@@ -59,9 +59,9 @@ export const projects: CaseProps[] = [
     id: 4,
     link: "https://www.instagram.com/p/DQDoxelihFo/?igsh=NWdwZDM3cWVxbzdu",
     image: project4,
-    title: "Лендинг для запуска продукта",
-    result: "Собрали 500+ заявок за первую неделю",
-    description: "Разработали продающий лендинг для запуска нового продукта. Реализовали A/B тестирование и формы захвата лидов.",
+    title: "Динамический видеоконтент",
+    result: "700+ просмотров в первые 24 часа",
+    description: "Создал эмоциональный видеоролик с качественным монтажом и цветокоррекцией. Благодаря качественному монтажу, увеличил вовлекаемост зрителей и увеличил охват",
     author: {
       image: author,
       name: "Сатановский Матвей"

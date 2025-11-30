@@ -71,7 +71,7 @@ const Hero = () => {
                 <div className={`container__hero`}>
                     <div className="hero__text">
                         <h1 className="hero__text__title">Контент-мейкер Гений,&nbsp;Филантроп <span className="name">Сатановский Матвей</span></h1>
-                        <p className="text">Директор по Себе | Основатель Своего Будущего <br /> Превращаю идеи в цифровую реальность через монтаж, код и тексты. <br /> Добро пожаловать на стройплощадку.</p>
+                        <p className="text text_hero ">Директор по Себе | Основатель Своего Будущего <br /> Превращаю идеи в цифровую реальность через монтаж, код и тексты. <br /> Добро пожаловать на стройплощадку.</p>
                         <div className="buttons">
                             <Button size="normal" onClick={() => scrollToSection("about")}>Поподробнее</Button>
                             <Button className="acent" size="big" onClick={() => scrollToSection("service")}>Начать коллабарацию</Button>

@@ -1,4 +1,4 @@
-import myPhoto from '../../../assets/images/about.jpg'
+import myPhoto from "../../../assets/images/order.png"
 import Button from '../../../ui/Button/Button';
 import './Order.css'
 import { useForm } from 'react-hook-form';
@@ -29,16 +29,15 @@ const Order = () => {
                         <div className="order__text">
                             <h3>Начнем ваш проект вместе!</h3>
                             <p className="order__description">
-                                Расскажите о вашей идее, и я помогу воплотить ее в жизнь.
-                                Обсудим все детали и найдем оптимальное решение.
+                                Давайте обсудим вашу задачу и найдем лучшее решение. От концепции до реализации — я помогу вам создать качественный продукт, который будет решать ваши бизнес-задачи.
                             </p>
                         </div>
                     </div>
 
                     <div className="order__form-container">
                         <form onSubmit={handleSubmit(onSubmit)} className="order__form">
-                            <h4 className="form__title">Отправить заявку</h4>
-                            <p className="form__subtitle">Заполните форму и я свяжусь с вами в ближайшее время</p>
+                            <h4 className="form__title">Обсудить проект</h4>
+                            <p className="form__subtitle">Оставьте заявку, и я свяжусь с вами в течение 24 часов</p>
 
                             <div className="form__group">
                                 <label htmlFor="name" className="form__label">Ваше имя *</label>

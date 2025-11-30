@@ -154,7 +154,37 @@
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
+
 /* Адаптивность */
+
+@media (max-width: 1280px) {
+    .hero__text {
+        margin-top: 10rem;
+    }
+
+    .hero__text__title {
+        max-width: 30rem;
+        font-size: 3rem;
+    }
+
+    .text_hero {
+        max-width: 30rem;
+    }
+
+    .hero__image {
+        order: 1;
+        width: 100%;
+        position: relative;
+        height: 50vh;
+    }
+
+    .container__hero {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+}
+
 @media (max-width: 768px) {
     .burger {
         display: flex;
@@ -206,7 +236,7 @@
         font-size: 3rem;
     }
 
-    .text {
+    .text_hero {
         font-size: 1.2rem;
     }
 
@@ -225,7 +255,7 @@
         font-size: 2.2rem;
     }
 
-    .text {
+    .text_hero {
         font-size: 1.1rem;
     }
 
