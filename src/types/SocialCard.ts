@@ -33,7 +33,7 @@ export const socialData: SocialCardProps[] = [
   {
     id: 3,
     name: "TikTok",
-    subscribers: "10 подписчиков",
+    subscribers: "13 подписчиков",
     description: "Эдиты, мотивационные и юмористические видео",
     icon: "🎵",
     link: "https://www.tiktok.com/@mottyrix",

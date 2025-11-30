@@ -16,33 +16,36 @@ const Order = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitMessage, setSubmitMessage] = useState('');
 
-    // URL твоего сервера на Vercel
-    const EMAIL_API_URL = 'https://email-server-qgphttrjq-matveys-projects-86ea41cd.vercel.app/api/send-email';
+    // Удален старый EMAIL_API_URL
 
     const onSubmit = async (data: OrderFormData) => {
         setIsSubmitting(true);
         setSubmitMessage('');
 
         try {
-            const response = await fetch(EMAIL_API_URL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
+            const formData = new FormData();
+            formData.append("name", data.name);
+            formData.append("email", data.email);
+            formData.append("service", data.service);
+            formData.append("message", data.message);
+            formData.append("access_key", "679221b8-3718-4e30-8418-7058b7b93515");
+
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
             });
 
             const result = await response.json();
 
             if (result.success) {
                 setSubmitMessage('✅ Сообщение отправлено! Я свяжусь с вами в течение 24 часов.');
-                reset(); // Очищаем форму
+                reset();
             } else {
-                setSubmitMessage(`❌ ${result.message}`);
+                setSubmitMessage(`❌ ${result.message || 'Произошла ошибка при отправке.'}`);
             }
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (error) {
-            setSubmitMessage('❌ Ошибка сети. Пожалуйста, попробуйте еще раз.');
+            console.error('Ошибка отправки:', error);
+            setSubmitMessage('❌ Ошибка отправки. Пожалуйста, попробуйте еще раз или свяжитесь со мной другим способом.');
         } finally {
             setIsSubmitting(false);
         }

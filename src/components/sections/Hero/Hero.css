@@ -208,10 +208,12 @@
         gap: 0;
     }
 
+
     .hero__text {
         order: 2;
         padding: 2rem 1rem;
         max-width: 100%;
+        margin: 0;
     }
 
     .hero__image {
@@ -251,6 +253,7 @@
 }
 
 @media (max-width: 480px) {
+
     .hero__text__title {
         font-size: 2.2rem;
     }
@@ -269,6 +272,14 @@
 
     .side-menu {
         width: 85%;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .hero__text {
+        margin-bottom: 1rem;
     }
 
 }
