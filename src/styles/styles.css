@@ -153,6 +153,10 @@ nav .footer__link {
     font-size: 1rem;
   }
 
+  .text .link {
+    font-size: 1rem;
+  }
+
   h1 {
     font-size: 2.5rem;
   }
@@ -175,9 +179,6 @@ nav .footer__link {
     font-size: 1rem;
   }
 
-  .text {
-    font-size:  1rem;
-  }
 }
 
 @media (max-width: 480px) {
@@ -203,6 +204,10 @@ nav .footer__link {
   }
 
   .text {
+    font-size: 0.9rem;
+  }
+
+  .text .link {
     font-size: 0.9rem;
   }
 }
