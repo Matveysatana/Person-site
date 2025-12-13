@@ -2,8 +2,10 @@ import aboutFoto from '../../../assets/images/about.jpg'
 import { benefit } from '../../../types/BenefitItem';
 import BenefitItem from '../../../ui/BenefitItem/BenefitItem';
 import Link from '../../../ui/Link/Link';
+import { motion } from 'framer-motion';
 
 import './About.css'
+import { slideInLeft, slideInRight, springIn } from '../../../utils/animations';
 
 
 const About = () => {
@@ -11,13 +13,25 @@ const About = () => {
         <section className="section" id="about">
             <div className="container about_flex">
                 <div className="about">
-                    <div className="about__image_block">
+                    <motion.div className="about__image_block"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.5 }}
+                        variants={slideInLeft}
+                        transition={{ duration: 0.6 }}
+                    >
                         <img src={aboutFoto} className="about__image" alt="Фото Матвея" loading='lazy' />
                         <figcaption className="about__image_caption">
                             Фотка с первенства Крыма, поподробнее можно посмотреть <Link id='https://vt.tiktok.com/ZSfVqQ6Tn/' className='link__text'>здесь</Link>
                         </figcaption>
-                    </div>
-                    <div className="about__text">
+                    </motion.div>
+                    <motion.div className="about__text"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.5 }}
+                        variants={slideInRight}
+                        transition={{ duration: 0.6 }}>
+
                         <p className="header2">Почему выбирают меня?</p>
                         <blockquote className="about__quote">
                             "Современный мир не спрашивает возраст — он ценит идеи, скорость и смелость их реализации"
@@ -30,20 +44,22 @@ const About = () => {
                         <p className="text">
                             Готов создать для тебя проект, который будет выделяться?<br /> С моими преимуществами ты можешь ознакомиться ниже  ↓
                         </p>
-                    </div>
+                    </motion.div>
 
                 </div>
 
-                <div className="about__benefit">
+                <motion.div className="about__benefit"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={springIn}
+                    transition={{ duration: 0.6 }}>
                     {benefit.map((benefit) => (
                         <BenefitItem
                             key={benefit.id}
-                            section={benefit.section}
-                            title={benefit.title}
-                            description={benefit.description}
-                            image={benefit.image} />
+                            {...benefit} />
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section >
     );
