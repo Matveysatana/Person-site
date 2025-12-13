@@ -7,8 +7,7 @@ const Services = () => {
         <section className="section" id="service">
             <div className="container ">
                 <div className="text__block">
-                    <h2>Что я могу сделать для <span className="you">тебя</span></h2>
-                    <p className="text">услуги, которые тебе могут подойти) </p>
+                    <p className="header2">Что я могу сделать для <span className="you">тебя </span></p>
                 </div>
 
                 <div className="cards ">

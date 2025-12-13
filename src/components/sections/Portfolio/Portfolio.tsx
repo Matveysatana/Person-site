@@ -20,8 +20,7 @@ const Portfolio = () => {
         <section className='section' id='portfolio'>
             <div className="container">
                 <div className="portfolio__text">
-                    <h2 className="title">Мои работы</h2>
-                    <p className="text">портфолио собранное из реальных проектов и отзывов</p>
+                    <p className="header2">Мои работы</p>
                 </div>
 
                 <div className="portfolio__slider-container">

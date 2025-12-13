@@ -7,7 +7,7 @@ const Social = () => {
         <section className='section' id='social'>
             <div className="container">
                 <div className="cta__text">
-                    <h2>Еще не готовы к заказу?</h2>
+                    <p className='header2'>Еще не готовы к заказу?</p>
                     <p className="text">Тогда, можете посмотреть меня в других сферах медийности и знать обо мне побольше!</p>
                 </div>
                 <div className="social__cards">
