@@ -7,24 +7,34 @@ import instagramm from '../../../assets/socialLogos/Insta.svg'
 
 import './Footer.css'
 import Link from '../../../ui/Link/Link'
+import { motion } from 'framer-motion';
+import { fadeInBottom, springIn } from '../../../utils/animations'
 
 
 const Footer = () => {
     return (
         <div className='footer'>
             <div className="container footer__contetn">
-
                 <Link id={"https://t.me/Mottyrix"} target="_blank" ><img src={logo} alt="Логотип" className="footer_logo" /></Link>
-
-                <div className="footer__nav">
+                <motion.div className="footer__nav"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={fadeInBottom}
+                    transition={{ duration: 0.6 }}>
                     <nav>
                         <Link id={'#about'} className={'footer__link link'}>Обо мне</Link>
                         <Link id={'#service'} className={'footer__link link'}>Услуги</Link>
                         <Link id={'#portfolio'} className={'footer__link link'}>Кейсы</Link>
                         <Link id={'#social'} className={'footer__link link'}>Соц сети</Link>
                     </nav>
-                </div>
-                <div className="footer__social">
+                </motion.div>
+                <motion.div className="footer__social"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={springIn}
+                    transition={{ duration: 0.6 }}>
                     <Link id={"https://youtube.com/@mottyrix"} className={"social youtube"} target="_blank">
                         <img src={youtube} alt="" />
                     </Link>
@@ -38,11 +48,16 @@ const Footer = () => {
                         <img src={instagramm} alt="" />
                     </Link>
 
-                </div>
-                <div className="footer__copr">
+                </motion.div>
+                <motion.div className="footer__copr"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={fadeInBottom}
+                    transition={{ duration: 0.6 }}>
                     <p className="text">Все права защиещены</p>
                     <Link id={'https://t.me/Mottyrix'} className='footer_copy' ><span className='footer__title'> @Сатановский&nbsp;Матвей&nbsp;2025</span></Link>
-                </div>
+                </motion.div>
             </div>
         </div>
     );
