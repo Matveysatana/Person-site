@@ -3,6 +3,8 @@ import Button from '../../../ui/Button/Button';
 import './Order.css';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { scaleIn, slideInLeft, slideInRight, springIn } from "../../../utils/animations";
 
 interface OrderFormData {
     name: string;
@@ -56,21 +58,41 @@ const Order = () => {
             <div className="container">
                 <div className="order__wrapper">
                     {/* Левая часть - Фото и текст */}
-                    <div className="order__info">
+                    <motion.div className="order__info"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.6 }}
+                        variants={slideInLeft}
+                        transition={{ duration: 0.6 }}>
                         <div className="order__photo-container">
                             <img src={myPhoto} alt="Мое фото" className="order__photo" />
                         </div>
-                        <div className="order__text">
+                        <motion.div className="order__text"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.3 }}
+                            variants={scaleIn}
+                            transition={{ duration: 0.6 }}>
                             <h3>Начнем ваш проект вместе!</h3>
                             <p className="order__description">
                                 Давайте обсудим вашу задачу и найдем лучшее решение. От концепции до реализации — я помогу вам создать качественный продукт, который будет решать ваши бизнес-задачи.
                             </p>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
 
                     {/* Правая часть - Форма */}
-                    <div className="order__form-container">
-                        <form onSubmit={handleSubmit(onSubmit)} className="order__form">
+                    <motion.div className="order__form-container"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        variants={slideInRight}
+                        transition={{ duration: 0.6 }}>
+                        <motion.form onSubmit={handleSubmit(onSubmit)} className="order__form"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.6 }}
+                            variants={springIn}
+                            transition={{ duration: 0.6 }}>
                             <h4 className="form__title">Обсудить проект</h4>
                             <p className="form__subtitle">Оставьте заявку, и я свяжусь с вами в течение 24 часов</p>
 
@@ -150,8 +172,8 @@ const Order = () => {
                                     {submitMessage}
                                 </div>
                             )}
-                        </form>
-                    </div>
+                        </motion.form>
+                    </motion.div>
                 </div>
             </div>
         </section>

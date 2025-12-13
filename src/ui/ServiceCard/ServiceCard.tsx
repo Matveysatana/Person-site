@@ -1,7 +1,9 @@
 import type { ServiceCardProps } from "../../types/ServiceCard";
+import { slideInLeft, springIn } from "../../utils/animations";
 import { scrollToSection } from "../../utils/scrollUtils";
 import Button from "../Button/Button";
 import './ServiceCard.css'
+import { motion } from 'framer-motion';
 
 
 
@@ -10,14 +12,30 @@ const ServiceCard = ({ id, image, title, description, features }: ServiceCardPro
 
     return (
         <div className="card__wallaper" >
-            <div className="number">{id}</div>
+            <motion.div className="number"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.4 }}
+                variants={slideInLeft}
+                transition={{ duration: 0.6 }}>{id}</motion.div>
 
 
-            <div className="card__image">
+            <motion.div className="card__image"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                variants={springIn}
+                transition={{ duration: 0.6 }}>
                 <img className="card__icon" src={image} alt={title} />
-            </div>
+            </motion.div>
 
-            <div className="card__content">
+            <motion.div className="card__content"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={springIn}
+                transition={{ duration: 0.6 }}
+            >
 
                 <div className="card__text">
                     <h3 className="card__text__title">{title}</h3>
@@ -35,11 +53,16 @@ const ServiceCard = ({ id, image, title, description, features }: ServiceCardPro
                     </ul>
                 }
 
-            </div>
+            </motion.div>
 
-            <div className="card__cta">
+            <motion.div className="card__cta"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={springIn}
+                transition={{ duration: 0.6 }}>
                 <Button className="acent" onClick={() => scrollToSection("order")}>Обсудить проект</Button>
-            </div>
+            </motion.div>
         </div>
     );
 };
