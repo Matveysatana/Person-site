@@ -1,14 +1,15 @@
 import { useState } from 'react';
-import hero from '../../../assets/images/hero.png'
-import logo from '../../../../public/logo.svg'
-import './Hero.css'
+import { motion } from "framer-motion";
+import hero from '../../../assets/images/hero.png';
+import logo from '../../../../public/logo.svg';
+import './Hero.css';
 import Button from "../../../ui/Button/Button";
 import { scrollToSection } from "../../../utils/scrollUtils";
 import Link from '../../../ui/Link/Link';
+import { fadeInUp, slideInLeft, slideInRight } from '../../../utils/animations';
 
 const Hero = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
     const handleLinkClick = (sectionId: string) => {
         scrollToSection(sectionId);
         setIsMenuOpen(false);
@@ -17,13 +18,18 @@ const Hero = () => {
     return (
         <section className="section" id="home">
             <div className="container flex-column">
-                <div className={`container__header flex-between`}>
+                <motion.div
+                    className={`container__header flex-between`}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={fadeInUp}
+                    transition={{ duration: 0.5 }}
+                >
                     <Link className="header__logo" target="_blank" id="https://t.me/Mottyrix">
                         <img src={logo} alt="Логотип" className="logo" />
                         <span className="logo__text">Motty</span>
                     </Link>
-
-                    {/* Бургер-кнопка */}
                     <button
                         className={`burger ${isMenuOpen ? 'burger--active' : ''}`}
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -32,53 +38,52 @@ const Hero = () => {
                         <span></span>
                         <span></span>
                     </button>
-
-                    {/* Основное меню */}
                     <nav className="nav">
                         <Link id={"#about"} className={"link"}>Обо мне</Link>
                         <Link id={"#service"} className={"link"}>Услуги</Link>
                         <Link id={"#portfolio"} className={"link"}>Кейсы</Link>
                         <Link id={"#social"} className={"link"}>Соц сети</Link>
                     </nav>
-
-                    {/* Боковое меню */}
                     <div className={`side-menu ${isMenuOpen ? 'side-menu--active' : ''}`}
                         onClick={() => setIsMenuOpen(false)}>
                         <nav className="side-nav" onClick={(e) => e.stopPropagation()}>
-                            <Link
-                                id={"#about"}
-                                className={"link"}
-                                onClick={() => handleLinkClick("about")}
-                            >Обо мне</Link>
-                            <Link
-                                id={"#service"}
-                                className={"link"}
-                                onClick={() => handleLinkClick("service")}
-                            >Услуги</Link>
-                            <Link
-                                id={"#portfolio"}
-                                className={"link"}
-                                onClick={() => handleLinkClick("portfolio")}
-                            >Кейсы</Link>
-                            <Link
-                                id={"#social"}
-                                className={"link"}
-                                onClick={() => handleLinkClick("social")}
-                            >Соц сети</Link>
+                            <Link id={"#about"} className={"link"} onClick={() => handleLinkClick("about")}>Обо мне</Link>
+                            <Link id={"#service"} className={"link"} onClick={() => handleLinkClick("service")}>Услуги</Link>
+                            <Link id={"#portfolio"} className={"link"} onClick={() => handleLinkClick("portfolio")}>Кейсы</Link>
+                            <Link id={"#social"} className={"link"} onClick={() => handleLinkClick("social")}>Соц сети</Link>
                         </nav>
                     </div>
-                </div>
+                </motion.div>
+
                 <div className={`container__hero`}>
-                    <div className="hero__text">
+                    <motion.div
+                        className="hero__text"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.3 }}
+                        variants={slideInLeft}
+                        transition={{ duration: 0.6 }}
+                    >
                         <h1 className="hero__text__title">Контент-мейкер Гений,&nbsp;Филантроп <span className="name">Сатановский Матвей</span></h1>
                         <p className="text text_hero ">Директор по Себе | Основатель Своего Будущего <br /> Превращаю идеи в цифровую реальность через монтаж, код и тексты. <br /> Добро пожаловать на стройплощадку.</p>
                         <div className="buttons">
                             <Button size="normal" onClick={() => scrollToSection("about")}>Поподробнее</Button>
-                            <Button className="acent" size="big" onClick={() => scrollToSection("service")}>Начать коллабарацию</Button>
+                            <Button className="acent" size="big" onClick={() => scrollToSection("service")}>Начать коллаборацию</Button>
                         </div>
-                    </div>
+                    </motion.div>
+
                     <div className="hero__image">
-                        <img src={hero} alt="Фото автора" className="hero-img" />
+                        <motion.img
+                            src={hero}
+                            alt="Фото автора"
+                            className="hero-img"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.3 }}
+                            variants={slideInRight}
+                            transition={{ duration: 0.7 }}
+
+                        />
                     </div>
                 </div>
             </div>
