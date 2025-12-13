@@ -1,5 +1,7 @@
 import type { CaseProps } from "../../types/Case";
+import { fadeInBottom, slideInLeft } from "../../utils/animations";
 import "./Case.css"
+import { motion } from 'framer-motion';
 
 const Case = ({ link, image, title, result, description, author }: CaseProps) => {
     return (
@@ -10,13 +12,25 @@ const Case = ({ link, image, title, result, description, author }: CaseProps) =>
                 <a className="project__image" href={link} target="_blank" rel="noopener noreferrer">
                     <img src={image} alt={title} />
                 </a>
-                <div className="project__result">
+                <motion.div className="project__result"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.7 }}
+                    variants={fadeInBottom}
+                    transition={{ duration: 0.6 }}
+                >
                     <span className="result">Результат: {result}</span>
-                </div>
+                </motion.div>
 
             </div>
 
-            <div className="project__review__block">
+            <motion.div className="project__review__block"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.8 }}
+                variants={slideInLeft}
+                transition={{ duration: 0.6 }}
+            >
 
                 <div className="project__text">
                     <h4 className="project__title">{title}</h4>
@@ -30,8 +44,8 @@ const Case = ({ link, image, title, result, description, author }: CaseProps) =>
                     </div>
                 </div>
 
-            </div>
-        </div>
+            </motion.div>
+        </div >
     );
 };
 

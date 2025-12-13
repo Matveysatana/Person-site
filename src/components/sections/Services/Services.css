@@ -12,10 +12,10 @@
 
 .text__block {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
-.text__block h2 {
+.text__block p {
     color: var(--text-primary);
 
 }

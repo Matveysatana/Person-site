@@ -37,6 +37,7 @@
     display: flex;
     gap: 1rem;
     margin-bottom: 3rem;
+    padding-bottom: 1rem;
 }
 
 .about__image_block {
@@ -156,15 +157,6 @@
         font-size: 0.85rem;
         margin-bottom: 1rem;
         padding: 0.5rem;
-    }
-
-    .about__text__title {
-        font-size: 1.5rem;
-    }
-
-    .text {
-        font-size: 0.9rem;
-        line-height: 1.5;
     }
 
     .about__image_caption {
